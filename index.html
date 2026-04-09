@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+	<link rel="stylesheet" href="style.css">
+	<title>SkyPulse — Weather</title>
+</head>
+<body>
+<div class="container">
+
+	<!-- FRONT PAGE -->
+	<div class="frontpage">
+		<div class="stars"></div>
+		<div class="frontpage-contents">
+			<div class="logo-badge">
+				<i class='bx bxs-cloud-lightning'></i>
+			</div>
+			<h1>SkyPulse</h1>
+			<p class="tagline">Real-time forecasts at your fingertips</p>
+			<button type="button" class="getting-started-btn">
+				<span>Get Started</span>
+				<i class='bx bx-chevron-right'></i>
+			</button>
+			<div class="front-features">
+				<div class="front-feat-item"><i class='bx bx-current-location'></i><span>Live Data</span></div>
+				<div class="front-feat-item"><i class='bx bx-calendar-week'></i><span>5-Day Forecast</span></div>
+				<div class="front-feat-item"><i class='bx bxs-thermometer'></i><span>Realtime Temp</span></div>
+			</div>
+		</div>
+	</div>
+
+	<!-- WEATHER CONTAINER -->
+	<div class="weather-container">
+
+		<!-- Header bar -->
+		<div class="app-header">
+			<div class="app-logo"><i class='bx bxs-cloud-lightning'></i> SkyPulse</div>
+			<div class="weatherInputField">
+				<i class='bx bx-search-alt'></i>
+				<input class="citySearch" type="text" placeholder="Search city...">
+				<button type="button" class="searchBtn">Search</button>
+			</div>
+		</div>
+
+		<!-- Main weather card -->
+		<div class="weatherInput">
+			<div class="location-data">
+				<div class="location-content">
+					<i class='bx bxs-map'></i>
+					<h3>-----</h3>
+				</div>
+				<p class="date-text">Date Month Year</p>
+			</div>
+			<div class="weather-Degree">
+				<div class="degree-main">
+					<h1>--°</h1>
+					<div class="degree-icon-wrap">
+						<!-- icon populated by JS -->
+					</div>
+				</div>
+				<h2 class="weather-desc">-----</h2>
+			</div>
+			<div class="weather-pallete">
+				<div class="pallete-data">
+					<div class="pallete-icon"><i class='bx bx-water'></i></div>
+					<small>-- hPa</small>
+					<span>Pressure</span>
+				</div>
+				<div class="pallete-divider"></div>
+				<div class="pallete-data">
+					<div class="pallete-icon"><i class='bx bxs-droplet-half'></i></div>
+					<small>-- %</small>
+					<span>Humidity</span>
+				</div>
+				<div class="pallete-divider"></div>
+				<div class="pallete-data">
+					<div class="pallete-icon"><i class='bx bx-wind'></i></div>
+					<small>-- m/s</small>
+					<span>Wind</span>
+				</div>
+			</div>
+		</div>
+
+		<!-- 5-day forecast -->
+		<div class="forecast-section">
+			<div class="forecast-label">
+				<i class='bx bx-calendar-week'></i>
+				<span>5-Day Forecast</span>
+			</div>
+			<div class="swiper mySwiper weather-forecasts">
+				<ul class="swiper-wrapper weather-ul">
+					<li class="swiper-slide weather-data"><span>-- -- --</span><small>--°</small></li>
+					<li class="swiper-slide weather-data"><span>-- -- --</span><small>--°</small></li>
+					<li class="swiper-slide weather-data"><span>-- -- --</span><small>--°</small></li>
+					<li class="swiper-slide weather-data"><span>-- -- --</span><small>--°</small></li>
+					<li class="swiper-slide weather-data"><span>-- -- --</span><small>--°</small></li>
+				</ul>
+			</div>
+		</div>
+
+		<footer class="app-footer">Powered by OpenWeatherMap</footer>
+	</div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
